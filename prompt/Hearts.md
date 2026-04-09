@@ -1,0 +1,1 @@
+2D pixel art effect sprite, 32x32 pixels, cute heart shape, pink and red gradient, small sparkles around it, transparent background, game UI element, clean pixel edges, retro game heart icon --ar 1:1

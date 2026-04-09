@@ -1,0 +1,1 @@
+2D pixel art UI element, 128x128 pixels, rounded speech bubble shape, white with soft gray border, small tail at bottom, comic style bubble, clean pixel edges, game UI, transparent background --ar 1:1

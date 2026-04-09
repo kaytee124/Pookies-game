@@ -1,0 +1,1 @@
+2D pixel art weapon sprite, 32x32 pixels, simple pixel sword, silver blade with blue glow, dark handle, slightly glowing effect, transparent background, retro RPG weapon icon --ar 1:1

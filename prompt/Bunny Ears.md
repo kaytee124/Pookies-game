@@ -1,0 +1,1 @@
+2D pixel art accessory sprite, 32x32 pixels, cute bunny ears, white with pink inner ear, Chiikawa Usagi inspired style, designed to appear on character head, transparent background, kawaii accessory --ar 1:1

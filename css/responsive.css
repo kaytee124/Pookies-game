@@ -1,0 +1,364 @@
+/* ============================================
+   JOURNEY - Responsive Stylesheet
+   Mobile and tablet adaptations
+   ============================================ */
+
+/* Tablet Breakpoint (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    :root {
+        --avatar-size: 180px;
+        --text-xl: 22px;
+        --text-2xl: 28px;
+        --text-3xl: 40px;
+    }
+    
+    .game-title {
+        font-size: 64px;
+        letter-spacing: 16px;
+    }
+    
+    .text-box {
+        width: 92%;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .choices-grid {
+        max-width: 550px;
+    }
+    
+    .avatar-container.left {
+        margin-left: 30px;
+    }
+    
+    .avatar-container.right {
+        margin-right: 30px;
+    }
+}
+
+/* Mobile Landscape (max-height: 600px) */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    :root {
+        --avatar-size: 140px;
+        --text-md: 14px;
+        --text-lg: 16px;
+        --spacing-lg: 12px;
+    }
+    
+    .avatar-container.left {
+        margin-bottom: 80px;
+        margin-left: 20px;
+    }
+    
+    .avatar-container.right {
+        margin-bottom: 80px;
+        margin-right: 20px;
+    }
+    
+    .text-box {
+        padding: var(--spacing-sm) var(--spacing-md);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .typewriter-text {
+        min-height: 50px;
+        font-size: var(--text-sm);
+    }
+    
+    .choices-grid {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-xs);
+        max-width: 500px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .choice-button {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .game-title {
+        font-size: 48px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .pause-panel {
+        padding: var(--spacing-lg);
+        min-width: 280px;
+    }
+}
+
+/* Mobile Portrait (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    :root {
+        --avatar-size: 150px;
+        --text-md: 14px;
+        --text-lg: 18px;
+        --text-xl: 20px;
+        --text-2xl: 24px;
+        --spacing-lg: 12px;
+        --spacing-xl: 20px;
+    }
+    
+    #game-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #character-layer {
+        padding: 0 var(--spacing-md);
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .avatar-container.left {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    
+    .avatar-container.right {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    
+    .game-title {
+        font-size: 40px;
+        letter-spacing: 8px;
+    }
+    
+    .game-subtitle {
+        font-size: var(--text-md);
+        letter-spacing: 3px;
+    }
+    
+    .title-button {
+        width: 260px;
+        padding: var(--spacing-md);
+        font-size: var(--text-md);
+    }
+    
+    .text-box {
+        width: 95%;
+        padding: var(--spacing-md);
+    }
+    
+    .speaker-tag {
+        font-size: 11px;
+        padding: 2px 12px;
+    }
+    
+    .choices-grid {
+        padding: var(--spacing-sm);
+        width: 95%;
+    }
+    
+    .choice-button {
+        padding: var(--spacing-sm);
+        font-size: 13px;
+    }
+    
+    .choice-icon {
+        font-size: 18px;
+        min-width: 24px;
+    }
+    
+    .emote-bubble {
+        font-size: 18px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .emote-bubble.bubble-text {
+        font-size: 11px;
+        max-width: 140px;
+        padding: var(--spacing-sm);
+    }
+    
+    .menu-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+    
+    .pause-panel {
+        padding: var(--spacing-lg);
+        min-width: 260px;
+    }
+    
+    .pause-panel h2 {
+        font-size: 24px;
+    }
+    
+    .menu-option {
+        padding: var(--spacing-sm);
+        font-size: 14px;
+    }
+    
+    .ending-content {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-md);
+    }
+    
+    .ending-title {
+        font-size: 32px;
+    }
+    
+    .game-banner {
+        font-size: 18px;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        white-space: nowrap;
+    }
+}
+
+/* Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    :root {
+        --avatar-size: 130px;
+    }
+    
+    .game-title {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+    
+    .title-button {
+        width: 220px;
+        font-size: 14px;
+    }
+    
+    .choice-button {
+        font-size: 12px;
+    }
+    
+    .choice-icon {
+        font-size: 16px;
+        min-width: 20px;
+    }
+}
+
+/* Tall Mobile Screens */
+@media screen and (min-height: 800px) and (max-width: 480px) {
+    #character-layer {
+        padding-top: 10vh;
+    }
+}
+
+/* Notch / Dynamic Island Support */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .menu-btn {
+        top: calc(var(--spacing-md) + env(safe-area-inset-top));
+        right: calc(var(--spacing-md) + env(safe-area-inset-right));
+    }
+    
+    #ui-layer {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .choice-button:hover {
+        transform: none;
+    }
+    
+    .choice-button:active {
+        transform: scale(0.97);
+        background: var(--color-primary-light);
+    }
+    
+    .menu-btn:hover {
+        transform: none;
+    }
+    
+    .menu-btn:active {
+        transform: scale(0.95);
+        background: var(--color-primary);
+    }
+    
+    .title-button:hover {
+        transform: none;
+    }
+    
+    .title-button:active {
+        transform: scale(0.98);
+    }
+    
+    /* Increase tap target sizes */
+    .choice-button {
+        min-height: 56px;
+    }
+    
+    .menu-option {
+        min-height: 48px;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #8B6EAE;
+        --color-secondary: #FFD1DC;
+        --color-text: #FFFFFF;
+    }
+    
+    .text-box {
+        border-width: 6px;
+    }
+    
+    .choice-button {
+        border-width: 4px;
+    }
+}
+
+/* Dark Mode Preference (already dark by default) */
+@media (prefers-color-scheme: light) {
+    /* Game is intentionally dark-themed, no light mode */
+    /* Override only if absolutely necessary */
+    :root {
+        --color-background: #1A1A2E;
+        --color-surface: #16213E;
+        --color-text: #EAEAEA;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .game-title {
+        animation: none;
+    }
+    
+    .avatar-bounce {
+        animation: none;
+    }
+    
+    .emote-bubble.visible {
+        animation: none;
+    }
+    
+    .choice-button {
+        transition: none;
+    }
+    
+    .game-banner {
+        animation: none;
+    }
+}
+
+/* Print Styles (for saving/sharing) */
+@media print {
+    #game-container {
+        background: white;
+        color: black;
+    }
+    
+    .menu-btn,
+    #pause-menu,
+    .choices-grid {
+        display: none;
+    }
+    
+    .text-box {
+        border: 2px solid black;
+        background: white;
+        color: black;
+    }
+}

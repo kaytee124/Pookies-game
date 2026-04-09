@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="JOURNEY - An interactive visual novel about connection, growth, and love">
+    <meta name="theme-color" content="#6B4E8D">
+    
+    <!-- PWA: manifest + SW only work on http(s); skipped on file:// to avoid CORS / null-origin errors -->
+    <script>
+        (function () {
+            if (location.protocol === 'http:' || location.protocol === 'https:') {
+                var link = document.createElement('link');
+                link.rel = 'manifest';
+                link.href = 'manifest.json';
+                document.head.appendChild(link);
+            }
+        })();
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>JOURNEY</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="assets/images/avatars/guy/idle.png">
+    <link rel="preload" as="image" href="assets/images/avatars/girl/idle.png">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Background Layer -->
+        <div id="background-layer" class="scene-bg"></div>
+        
+        <!-- Character Layer -->
+        <div id="character-layer">
+            <div id="avatar-guy" class="avatar-container left">
+                <img src="assets/images/avatars/guy/idle.png" alt="Guy" id="guy-sprite">
+                <div id="guy-bubble" class="emote-bubble hidden"></div>
+            </div>
+            <div id="avatar-girl" class="avatar-container right">
+                <img src="assets/images/avatars/girl/idle.png" alt="Girl" id="girl-sprite">
+                <div id="girl-bubble" class="emote-bubble hidden"></div>
+            </div>
+        </div>
+        
+        <!-- UI Layer -->
+        <div id="ui-layer">
+            <!-- Dialogue Box -->
+            <div id="dialogue-box" class="text-box">
+                <div id="speaker-name" class="speaker-tag"></div>
+                <div id="dialogue-text" class="typewriter-text"></div>
+                <div id="continue-indicator" class="continue-arrow hidden">▼</div>
+            </div>
+            
+            <!-- Choice Buttons Container -->
+            <div id="choices-container" class="choices-grid hidden"></div>
+            
+            <!-- Menu Button -->
+            <button id="menu-button" class="menu-btn" aria-label="Menu">☰</button>
+        </div>
+        
+        <!-- Pause Menu (Hidden by default) -->
+        <div id="pause-menu" class="pause-overlay hidden">
+            <div class="pause-panel">
+                <h2>PAUSED</h2>
+                <button id="resume-btn" class="menu-option">Resume</button>
+                <button id="save-btn" class="menu-option">Save Progress</button>
+                <button id="load-btn" class="menu-option">Load Game</button>
+                <button id="restart-btn" class="menu-option">Restart Journey</button>
+                <button id="quit-btn" class="menu-option">Quit to Title</button>
+            </div>
+        </div>
+        
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-overlay">
+            <div class="loading-content">
+                <h1>JOURNEY</h1>
+                <div class="loading-bar">
+                    <div id="loading-progress" class="loading-progress"></div>
+                </div>
+                <p id="loading-text">Loading assets...</p>
+            </div>
+        </div>
+        
+        <!-- Splash/Title Screen -->
+        <div id="title-screen" class="title-overlay">
+            <div class="title-content">
+                <h1 class="game-title">JOURNEY</h1>
+                <p class="game-subtitle">Brick by brick. Layer by layer.</p>
+                <button id="start-game" class="title-button">Begin Journey</button>
+                <button id="continue-game" class="title-button secondary hidden">Continue Journey</button>
+                <button id="gallery-btn" class="title-button tertiary">Memories</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts (Load order matters) -->
+    <script src="js/utils/assetBase.js"></script>
+    <script src="js/components/memoriesGallery.js"></script>
+    <script src="js/core/storage.js"></script>
+    <script src="js/core/gameState.js"></script>
+    <script src="js/utils/offlineHandler.js"></script>
+    <script src="js/core/preloader.js"></script>
+    <script src="js/data/dialogue.js"></script>
+    <script src="js/data/choices.js"></script>
+    <script src="js/data/paths.js"></script>
+    <script src="js/components/avatar.js"></script>
+    <script src="js/components/textBox.js"></script>
+    <script src="js/components/bubble.js"></script>
+    <script src="js/components/choiceButtons.js"></script>
+    <script src="js/components/background.js"></script>
+    <script src="js/utils/audioManager.js"></script>
+    <script src="js/utils/saveManager.js"></script>
+    <script src="js/core/router.js"></script>
+    <script src="js/scenes/sceneManager.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator && (location.protocol === 'http:' || location.protocol === 'https:')) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (reg) { console.log('SW registered', reg); })
+                .catch(function (err) { console.log('SW failed', err); });
+        }
+    </script>
+</body>
+</html>

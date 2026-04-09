@@ -1,0 +1,1 @@
+2D pixel art effect sprite, 32x32 pixels, protective shield bubble, soft blue translucent circle with white border, protective barrier effect, transparent background, game effect --ar 1:1

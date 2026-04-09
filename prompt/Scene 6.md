@@ -1,0 +1,2 @@
+File name: Food District
+2D pixel art background, 800x600 pixels, bustling food street, various food stalls with warm glowing lanterns, ramen shop, karaoke building with neon sign, arcade entrance with colorful lights, warm inviting colors, clean pixel art, limited palette, cozy street scene --ar 16:9

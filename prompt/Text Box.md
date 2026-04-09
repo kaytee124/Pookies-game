@@ -1,0 +1,1 @@
+2D pixel art UI element, 800x200 pixels, rounded rectangle text box, dark navy blue with lighter blue border, semi-transparent center, designed for dialogue text display, clean pixel edges, retro game UI, visual novel style --ar 4:1

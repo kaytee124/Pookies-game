@@ -1,0 +1,1 @@
+2D pixel art effect sprite, 32x32 pixels, tiny blue teardrop, slightly shiny, emotional effect, transparent background, anime game emotion indicator --ar 1:1

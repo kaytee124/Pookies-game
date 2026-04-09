@@ -1,0 +1,376 @@
+/* ============================================
+   JOURNEY - Scene-Specific Styles
+   Background variations and scene effects
+   ============================================ */
+
+/* Base Scene Background Setup */
+#background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image var(--transition-slow) ease;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* Background Overlay Effects */
+#background-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.2) 100%);
+    pointer-events: none;
+}
+
+/* Scene 1 - Discord Server */
+.scene-bg[data-bg="discord-server"] {
+    background-image: url('../assets/images/backgrounds/discord-server.png');
+    background-color: #2C2F33;
+}
+
+.scene-bg[data-bg="discord-server"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(44,47,51,0.3) 0%, rgba(30,33,37,0.5) 100%);
+    pointer-events: none;
+}
+
+/* Scene 2 - Sunset Chat */
+.scene-bg[data-bg="sunset-chat"] {
+    background-image: url('../assets/images/backgrounds/sunset-chat.png');
+    background-color: #FF9A76;
+}
+
+.scene-bg[data-bg="sunset-chat"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255,154,118,0.2) 0%, rgba(255,200,150,0.1) 100%);
+    pointer-events: none;
+}
+
+/* Scene 3 - Feelings (Same as sunset with overlay) */
+.scene-bg[data-bg="sunset-chat"][data-scene="scene3"]::after {
+    background: linear-gradient(45deg, rgba(255,107,139,0.15) 0%, rgba(255,154,118,0.1) 100%);
+}
+
+/* Scene 4 - Night Call */
+.scene-bg[data-bg="night-call"] {
+    background-image: url('../assets/images/backgrounds/night-call.png');
+    background-color: #1A1A2E;
+}
+
+.scene-bg[data-bg="night-call"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(255,255,200,0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Stars Animation for Night Scene */
+.scene-bg[data-bg="night-call"] .stars-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/effects/star-particle.png') repeat;
+    animation: starsTwinkle 3s ease-in-out infinite;
+}
+
+/* Scene 6 - Genshin Landscape */
+.scene-bg[data-bg="genshin-landscape"] {
+    background-image: url('../assets/images/backgrounds/genshin-landscape.png');
+    background-color: #87CEEB;
+    background-position: bottom center;
+}
+
+.scene-bg[data-bg="genshin-landscape"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(135,206,235,0.1) 0%, rgba(200,230,255,0.2) 100%);
+    pointer-events: none;
+}
+
+/* Floating clouds for Genshin scene */
+@keyframes genshinClouds {
+    from { background-position: 0 0; }
+    to { background-position: -2000px 0; }
+}
+
+.scene-bg[data-bg="genshin-landscape"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: url('../assets/images/effects/clouds.png') repeat-x;
+    background-size: 500px 100%;
+    opacity: 0.3;
+    animation: genshinClouds 60s linear infinite;
+    pointer-events: none;
+}
+
+/* Scene 8 - Dreamy Hearts */
+.scene-bg[data-bg="dreamy-hearts"] {
+    background-image: url('../assets/images/backgrounds/dreamy-hearts.png');
+    background-color: #FFB6C1;
+}
+
+.scene-bg[data-bg="dreamy-hearts"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,182,193,0.2) 0%, rgba(255,150,180,0.4) 100%);
+    pointer-events: none;
+}
+
+/* Scene 9 - Pastel Rainbow */
+.scene-bg[data-bg="pastel-rainbow"] {
+    background-image: url('../assets/images/backgrounds/pastel-rainbow.png');
+    background-color: #E8D5F5;
+}
+
+.scene-bg[data-bg="pastel-rainbow"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(255,200,200,0.1) 0%, 
+        rgba(255,230,200,0.1) 20%,
+        rgba(230,255,200,0.1) 40%,
+        rgba(200,255,230,0.1) 60%,
+        rgba(200,230,255,0.1) 80%,
+        rgba(230,200,255,0.1) 100%);
+    pointer-events: none;
+}
+
+/* Scene 10 - Fantasy Night */
+.scene-bg[data-bg="fantasy-night"] {
+    background-image: url('../assets/images/backgrounds/fantasy-night.png');
+    background-color: #0D0D2B;
+}
+
+.scene-bg[data-bg="fantasy-night"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 40% 60%, rgba(100,50,150,0.2) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Magical particles for fantasy scene */
+@keyframes magicParticles {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+}
+
+.scene-bg[data-bg="fantasy-night"] .magic-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/effects/magic-particle.png') repeat;
+    animation: magicParticles 4s ease-in-out infinite;
+}
+
+/* Scene 11 - Food District */
+.scene-bg[data-bg="food-district"] {
+    background-image: url('../assets/images/backgrounds/food-district.png');
+    background-color: #8B6914;
+    background-position: bottom center;
+}
+
+/* Warm overlay for food scene */
+.scene-bg[data-bg="food-district"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(139,105,20,0.3) 0%, rgba(255,200,100,0.1) 100%);
+    pointer-events: none;
+}
+
+/* Scene 12 - House Building */
+.scene-bg[data-bg="house-building"] {
+    background-image: url('../assets/images/backgrounds/house-building.png');
+    background-color: #4A3570;
+}
+
+.scene-bg[data-bg="house-building"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(74,53,112,0.2) 0%, rgba(107,78,141,0.3) 100%);
+    pointer-events: none;
+}
+
+/* Scene 13 - Horizon Ending */
+.scene-bg[data-bg="horizon-ending"] {
+    background-image: url('../assets/images/backgrounds/horizon-ending.png');
+    background-color: #FFB347;
+    background-position: center bottom;
+}
+
+.scene-bg[data-bg="horizon-ending"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255,179,71,0.2) 0%, rgba(255,220,150,0.1) 100%);
+    pointer-events: none;
+}
+
+/* Soft Evening Background */
+.scene-bg[data-bg="soft-evening"] {
+    background-image: url('../assets/images/backgrounds/soft-evening.png');
+    background-color: #6B5B8D;
+}
+
+.scene-bg[data-bg="soft-evening"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255,200,200,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Scene-Specific Character Positioning */
+[data-scene="scene1"] .avatar-container.left {
+    margin-left: 60px;
+}
+
+[data-scene="scene1"] .avatar-container.right {
+    margin-right: 60px;
+}
+
+[data-scene="scene10"] .avatar-container.left {
+    filter: drop-shadow(0 0 20px rgba(255,215,0,0.3));
+}
+
+[data-scene="scene13"] .avatar-container {
+    animation: avatarFloat 4s ease-in-out infinite;
+}
+
+[data-scene="scene13"] .avatar-container.left {
+    animation-delay: 0s;
+}
+
+[data-scene="scene13"] .avatar-container.right {
+    animation-delay: 0.2s;
+}
+
+/* Scene Transition Effects */
+.scene-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.scene-transition.active {
+    opacity: 1;
+}
+
+/* Scene Loading Indicator */
+.scene-loading {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    opacity: 0.5;
+    z-index: 30;
+}
+
+/* Background Fallbacks (for missing images) */
+.scene-bg[data-bg="discord-server"]:not([style*="url"]) {
+    background: linear-gradient(135deg, #2C2F33 0%, #1E2125 100%);
+}
+
+.scene-bg[data-bg="sunset-chat"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #FF9A76 0%, #FF6B8B 50%, #6B4E8D 100%);
+}
+
+.scene-bg[data-bg="night-call"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #0D0D2B 0%, #1A1A3E 50%, #2A2A5E 100%);
+}
+
+.scene-bg[data-bg="genshin-landscape"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F0FF 30%, #90EE90 100%);
+}
+
+.scene-bg[data-bg="fantasy-night"]:not([style*="url"]) {
+    background: radial-gradient(circle at 30% 40%, #2A1A4E 0%, #0D0D2B 100%);
+}
+
+.scene-bg[data-bg="food-district"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #8B6914 0%, #D4A04A 50%, #F0C878 100%);
+}
+
+.scene-bg[data-bg="house-building"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #4A3570 0%, #6B4E8D 100%);
+}
+
+.scene-bg[data-bg="horizon-ending"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #FFB347 0%, #FF8C69 40%, #6B4E8D 100%);
+}
+
+.scene-bg[data-bg="dreamy-hearts"]:not([style*="url"]) {
+    background: radial-gradient(circle at center, #FFB6C1 0%, #FF69B4 100%);
+}
+
+.scene-bg[data-bg="pastel-rainbow"]:not([style*="url"]) {
+    background: linear-gradient(135deg, #FFB6C1, #FFDAB9, #FFFACD, #B0E0E6, #DDA0DD);
+}
+
+.scene-bg[data-bg="soft-evening"]:not([style*="url"]) {
+    background: linear-gradient(180deg, #6B5B8D 0%, #8B7BAE 100%);
+}

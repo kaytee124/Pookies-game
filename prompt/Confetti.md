@@ -1,0 +1,1 @@
+2D pixel art effect sprite, 32x32 pixels, colorful confetti pieces falling, multiple colors pink yellow blue green, celebration effect, transparent background, party game effect --ar 1:1

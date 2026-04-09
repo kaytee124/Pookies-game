@@ -1,0 +1,1 @@
+2D pixel art UI element, 300x60 pixels, button with rounded corners, gradient purple to pink, subtle shine effect, designed for interactive choices, clean pixel edges, game UI button, visual novel style --ar 5:1

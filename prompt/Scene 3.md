@@ -1,0 +1,2 @@
+File name: Night Call
+2D pixel art background, 800x600 pixels, late night bedroom aesthetic, dark blue tones, fairy lights pixel art glowing, phone screen glow on desk, stars visible through window, cozy intimate atmosphere, clean pixel art, limited dark palette, game background --ar 16:9

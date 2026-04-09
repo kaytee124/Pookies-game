@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOURNEY - Ending</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="scene-page" data-scene="scene13">
+    <div id="game-container">
+        <div id="background-layer" class="scene-bg" data-bg="horizon-ending"></div>
+        
+        <div id="character-layer">
+            <div id="avatar-guy" class="avatar-container left">
+                <img src="../assets/images/avatars/guy/idle.png" alt="Guy" id="guy-sprite">
+                <div id="guy-bubble" class="emote-bubble hidden"></div>
+            </div>
+            <div id="avatar-girl" class="avatar-container right">
+                <img src="../assets/images/avatars/girl/idle.png" alt="Girl" id="girl-sprite">
+                <div id="girl-bubble" class="emote-bubble hidden"></div>
+            </div>
+        </div>
+        
+        <div id="ui-layer">
+            <div id="dialogue-box" class="text-box">
+                <div id="speaker-name" class="speaker-tag"></div>
+                <div id="dialogue-text" class="typewriter-text"></div>
+                <div id="continue-indicator" class="continue-arrow hidden">▼</div>
+            </div>
+            
+            <div id="choices-container" class="choices-grid hidden"></div>
+            
+            <button id="menu-button" class="menu-btn" aria-label="Menu">☰</button>
+        </div>
+        
+        <div id="pause-menu" class="pause-overlay hidden">
+            <div class="pause-panel">
+                <h2>PAUSED</h2>
+                <button id="resume-btn" class="menu-option">Resume</button>
+                <button id="save-btn" class="menu-option">Save Progress</button>
+                <button id="load-btn" class="menu-option">Load Game</button>
+                <button id="restart-btn" class="menu-option">Restart Journey</button>
+                <button id="quit-btn" class="menu-option">Quit to Title</button>
+            </div>
+        </div>
+        
+        <div id="ending-screen" class="ending-overlay hidden" aria-hidden="true">
+            <div class="ending-content">
+                <h1 class="ending-title">Brick by Brick</h1>
+                <p class="ending-message">I love you Danh and hope as our story grows i can extend this game to be longer and have our real pictures in oneday.</p>
+                <div class="ending-buttons">
+                    <button type="button" id="play-again-btn" class="ending-button">Play Again</button>
+                    <button type="button" id="memories-btn" class="ending-button secondary">Memories</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/utils/assetBase.js"></script>
+    <script src="../js/core/storage.js"></script>
+    <script src="../js/core/gameState.js"></script>
+    <script src="../js/core/router.js"></script>
+    <script src="../js/data/dialogue.js"></script>
+    <script src="../js/data/choices.js"></script>
+    <script src="../js/data/paths.js"></script>
+    <script src="../js/components/avatar.js"></script>
+    <script src="../js/components/textBox.js"></script>
+    <script src="../js/components/bubble.js"></script>
+    <script src="../js/components/choiceButtons.js"></script>
+    <script src="../js/components/background.js"></script>
+    <script src="../js/utils/audioManager.js"></script>
+    <script src="../js/components/memoriesGallery.js"></script>
+    <script src="../js/scenes/sceneManager.js"></script>
+    <script src="../js/scenes/scene13.js"></script>
+</body>
+</html>

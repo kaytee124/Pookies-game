@@ -1,0 +1,1 @@
+2D pixel art accessory sprite, 32x32 pixels, tiny cute crown, gold with small red and blue gems, designed to float above character, transparent background, princess game accessory, clean pixel edges --ar 1:1

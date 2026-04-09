@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of all static assets
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /pages/
+
+# Sitemap location
+Sitemap: https://[your-username].github.io/journey-game/sitemap.xml

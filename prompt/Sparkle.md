@@ -1,0 +1,1 @@
+2D pixel art effect sprite, 32x32 pixels, four-point star sparkle, golden yellow with white center, twinkling effect, transparent background, game UI element, clean pixel edges, magical particle --ar 1:1
