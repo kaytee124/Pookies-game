@@ -4,6 +4,11 @@
 
 (function() {
     document.addEventListener('DOMContentLoaded', () => {
-        SceneManager.loadScene('scene3');
+        const cur = GameState.get('currentScene');
+        if (cur === 'scene3_fearPath') {
+            SceneManager.loadScene('scene3_fearPath');
+        } else {
+            SceneManager.loadScene('scene3');
+        }
     });
 })();

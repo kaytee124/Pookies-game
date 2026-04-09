@@ -55,7 +55,8 @@ const ChoiceTree = {
                 effects: {
                     friendship: 15,
                     trust: 20,
-                    flag: 'communicated_care'
+                    flag: 'communicated_care',
+                    platonicPath: 1
                 }
             },
             {
@@ -127,7 +128,8 @@ const ChoiceTree = {
                 effects: {
                     romance: 25,
                     trust: 15,
-                    flag: 'mutual_immediate'
+                    flag: 'mutual_immediate',
+                    platonicPath: 1
                 }
             }
         ]
